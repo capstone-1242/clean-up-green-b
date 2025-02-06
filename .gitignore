@@ -1,0 +1,16 @@
+#this is to ignore our core files when pushing
+
+/wp-admin/
+/wp-includes/
+/wp-config.php
+
+#this is to ignore the logs and uploads 
+
+/wp-content/uploads/
+/wp-content/cache/
+/debug.log
+.DS_Store
+Thumbs.db
+node_modules/
+vendor/
+.env
