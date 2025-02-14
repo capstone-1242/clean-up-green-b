@@ -1,3 +1,13 @@
+
+#updated 02 14 2025 300pm 
+
+# this will  make it so we are only pushing the theme fils
+
+app/
+conf/
+logs/
+
+
 #this is to ignore our core files when pushing
 
 /wp-admin/
