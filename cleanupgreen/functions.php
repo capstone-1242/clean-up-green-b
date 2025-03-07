@@ -119,7 +119,7 @@ add_action( 'after_setup_theme', 'cleeanupgreen_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function cleeanupgreen_widgets_init() {
+function cleanupgreen_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'cleeanupgreen' ),
@@ -132,7 +132,22 @@ function cleeanupgreen_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'cleeanupgreen_widgets_init' );
+add_action( 'widgets_init', 'cleanupgreen_widgets_init' );
+
+// Register Hero Banner Widget
+function cleanupgreen_register_hero_banner() {
+    register_sidebar(array(
+        'name'          => 'Homepage Hero Banner',
+        'id'            => 'hero-banner',
+        'description'   => 'Add blocks or widgets for the homepage hero section.',
+        'before_widget' => '<section id="hero-banner" class="hero-banner">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="hero-title">',
+        'after_title'   => '</h2>',
+    ));
+}
+add_action('widgets_init', 'cleanupgreen_register_hero_banner');
+
 
 /**
  * Enqueue scripts and styles.
