@@ -1,63 +1,103 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying posts.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package cleeanupgreen
+ * @package Astra
+ * @since 1.0.0
  */
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+<?php astra_entry_before(); ?>
 
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				cleeanupgreen_posted_on();
-				cleeanupgreen_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php cleeanupgreen_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'cleeanupgreen' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'cleeanupgreen' ),
-				'after'  => '</div>',
+<article
+<?php
+		echo wp_kses_post(
+			astra_attr(
+				'article-content',
+				array(
+					'id'    => 'post-' . get_the_id(),
+					'class' => join( ' ', get_post_class() ),
+				)
 			)
 		);
 		?>
-	</div><!-- .entry-content -->
+>
+	<?php astra_entry_top(); ?>
+
+	<header class="entry-header <?php astra_entry_header_class(); ?>">
+
+		<?php
+		astra_the_title(
+			sprintf(
+				'<h2 class="entry-title" ' . astra_attr(
+					'article-title-content',
+					array(
+						'class' => '',
+					)
+				) . '><a href="%s" rel="bookmark">',
+				esc_url( get_permalink() )
+			),
+			'</a></h2>'
+		);
+		?>
+
+	</header><!-- .entry-header -->
+
+	<div class="entry-content clear"
+	<?php
+				echo wp_kses_post(
+					astra_attr(
+						'article-entry-content',
+						array(
+							'class' => '',
+						)
+					)
+				);
+				?>
+	>
+
+		<?php astra_entry_content_before(); ?>
+
+		<?php
+			the_content(
+				sprintf(
+					wp_kses(
+						/* translators: %s: Name of current post. */
+						__( 'Continue reading %s', 'astra' ) . ' <span class="meta-nav">&rarr;</span>',
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				)
+			);
+			?>
+
+		<?php astra_entry_content_after(); ?>
+
+		<?php
+			wp_link_pages(
+				array(
+					'before'      => '<div class="page-links">' . esc_html( astra_default_strings( 'string-single-page-links-before', false ) ),
+					'after'       => '</div>',
+					'link_before' => '<span class="page-link">',
+					'link_after'  => '</span>',
+				)
+			);
+			?>
+	</div><!-- .entry-content .clear -->
 
 	<footer class="entry-footer">
-		<?php cleeanupgreen_entry_footer(); ?>
+		<?php astra_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+
+	<?php astra_entry_bottom(); ?>
+
+</article><!-- #post-## -->
+
+<?php astra_entry_after(); ?>
