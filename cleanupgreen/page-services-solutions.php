@@ -5,10 +5,14 @@
 
 get_header();
 ?>
+<div id="primary" <?php astra_primary_class(); ?>>
+
+<?php astra_content_page_loop(); ?>
+
+</div><!-- #primary -->
 
     <!-- Page Heading -->
     <section id="page-heading" class="content-section">
-        <h1>Services and Solutions</h1>
         <p>We offer two types of solutions: Industrial and Residential.</p>
         <nav class="on-page-nav">
             <ul>
@@ -48,6 +52,32 @@ get_header();
                 </ul>
             </div>
         </div>
+    </section>
+    <!-- Residential Solutions Section -->
+    <section id="residential-solutions" class="content-section">
+        <h2>HOME SOLUTIONS</h2>
+        <p>We know oil spills and stains can be an annoying problem around the house. We offer a complete line of household solutions for stains and spills of all sizes. Great for residential homes, acreages, ranches, and farms.</p>
+        <ul>
+            <li>Quickly cleans up oil stains from any surface</li>
+        </ul>
+        <h3>HOW TO USE</h3>
+        <ul>
+            <li>Cleans up old and new stains, oil odours, and small spills</li>
+            <li>Simple 2 step liquid solution. Apply step 1, then apply step 2</li>
+            <li>Clean-Up Green liquid turns into a silica powder when dry.</li>
+            <li>Safe to leave in place or sweep up and discard in garbage bin.</li>
+        </ul>
+
+        <!-- Quick Tips Section -->
+        <section id="quick-tips" class="content-section">
+            <h3>QUICK TIPS:</h3>
+            <ul>
+                <li>Less product is required than other absorbent products. Powder does not absorb water.</li>
+                <li>For a large spill, use the powder to make a berm first to contain the spill and keep it localized in one area. Then proceed to spread powder to the inside of the spill.</li>
+            </ul>
+        </section>
+    </section>
+
 
         <!-- Review Section -->
         <section id="review" class="content-section">
@@ -74,31 +104,6 @@ get_header();
                 </div>
             </div>
         </section>
-    </section>
 
-    <!-- Residential Solutions Section -->
-    <section id="residential-solutions" class="content-section">
-        <h2>HOME SOLUTIONS</h2>
-        <p>We know oil spills and stains can be an annoying problem around the house. We offer a complete line of household solutions for stains and spills of all sizes. Great for residential homes, acreages, ranches, and farms.</p>
-        <ul>
-            <li>Quickly cleans up oil stains from any surface</li>
-        </ul>
-        <h3>HOW TO USE</h3>
-        <ul>
-            <li>Cleans up old and new stains, oil odours, and small spills</li>
-            <li>Simple 2 step liquid solution. Apply step 1, then apply step 2</li>
-            <li>Clean-Up Green liquid turns into a silica powder when dry.</li>
-            <li>Safe to leave in place or sweep up and discard in garbage bin.</li>
-        </ul>
-
-        <!-- Quick Tips Section -->
-        <section id="quick-tips" class="content-section">
-            <h3>QUICK TIPS:</h3>
-            <ul>
-                <li>Less product is required than other absorbent products. Powder does not absorb water.</li>
-                <li>For a large spill, use the powder to make a berm first to contain the spill and keep it localized in one area. Then proceed to spread powder to the inside of the spill.</li>
-            </ul>
-        </section>
-    </section>
-
+    
 <?php get_footer(); ?>

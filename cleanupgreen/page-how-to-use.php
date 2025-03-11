@@ -6,6 +6,8 @@
 get_header();
 ?>
 
+
+
     <!-- Page Heading -->
     <section id="page-heading" class="content-section">
         <h1>How to Use</h1>

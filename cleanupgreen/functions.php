@@ -392,3 +392,34 @@ require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-filters.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-hooks.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-functions.php';
 
+function create_product_post_type() {
+    register_post_type('product',
+        array(
+            'labels' => array(
+                'name' => __('Products'),
+                'singular_name' => __('Product')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+            'menu_icon' => 'dashicons-cart',
+        )
+    );
+}
+add_action('init', 'create_product_post_type');
+
+function create_store_post_type() {
+    register_post_type('store',
+        array(
+            'labels' => array(
+                'name' => __('Stores'),
+                'singular_name' => __('Store')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array('title', 'thumbnail'),
+            'menu_icon' => 'dashicons-store',
+        )
+    );
+}
+add_action('init', 'create_store_post_type');
