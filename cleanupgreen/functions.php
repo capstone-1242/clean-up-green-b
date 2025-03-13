@@ -423,3 +423,18 @@ function create_store_post_type() {
     );
 }
 add_action('init', 'create_store_post_type');
+function create_service_post_type() {
+    register_post_type('service',
+        array(
+            'labels' => array(
+                'name' => __('Services'),
+                'singular_name' => __('Service')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array('title', 'editor', 'thumbnail'),
+            'menu_icon' => 'dashicons-admin-tools',
+        )
+    );
+}
+add_action('init', 'create_service_post_type');

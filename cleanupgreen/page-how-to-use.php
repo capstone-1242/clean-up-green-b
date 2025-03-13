@@ -72,6 +72,14 @@ get_header();
             <li>Environmentally safe complete encapsulation</li>
             <li>Naturally bio-degrades the hydrocarbons leaving water clean</li>
         </ul>
+        <h3>Application</h3>
+        <p>Spray some solution on the object having spill and immediately start scrubing gently on the object or Surface with the spill.</p>
+        <h3>Removal</h3>
+        <p>Dont wait Too long after scrubing it clean it with water and cotton cloth.</p>
+        <p class="Note">Repeat the steps again if the object is not fully cleaned. </p>
+
+
+
     </section>
 
     </section>
