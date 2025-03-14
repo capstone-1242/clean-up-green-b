@@ -385,12 +385,6 @@ if ( version_compare( PHP_VERSION, '5.3', '>=' ) ) {
 
 require_once ASTRA_THEME_DIR . 'inc/core/markup/class-astra-markup.php';
 
-/**
- * Load deprecated functions
- */
-require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-filters.php';
-require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-hooks.php';
-require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-functions.php';
 
 function create_product_post_type() {
     register_post_type('product',
@@ -438,3 +432,20 @@ function create_service_post_type() {
     );
 }
 add_action('init', 'create_service_post_type');
+
+// woo commerce
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+
+add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
+
+function my_theme_wrapper_start() {
+    echo '<section id="main">';
+}
+
+function my_theme_wrapper_end() {
+    echo '</section>';
+}
+
+	
