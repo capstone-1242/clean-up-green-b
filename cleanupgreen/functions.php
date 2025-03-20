@@ -448,4 +448,8 @@ function my_theme_wrapper_end() {
     echo '</section>';
 }
 
-	
+// cart icon
+function cleeanupgreen_enqueue_font_awesome() {
+    wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css' );
+}
+add_action( 'wp_enqueue_scripts', 'cleeanupgreen_enqueue_font_awesome' );
