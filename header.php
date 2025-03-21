@@ -60,14 +60,6 @@
 					);
 					?>
 				</nav><!-- #site-navigation -->
-
-				<!-- WooCommerce Cart Icon -->
-				<div class="woocommerce-cart-icon">
-					<a href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart', 'cleeanupgreen' ); ?>">
-						<i class="fas fa-shopping-cart"></i> <!-- Font Awesome cart icon -->
-						<span class="cart-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
-					</a>
-				</div>
 			</div><!-- .header-right -->
 		</div><!-- .header-container -->
 	</header><!-- #masthead -->
