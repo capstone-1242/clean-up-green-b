@@ -1095,8 +1095,7 @@ section {
 	display: flex;
 	gap: 4rem;
 }
-
-.text-content {
+.text-content-1 {
 	flex: 1;
 	max-width: 50%;
 	padding: 4rem 5rem;
@@ -1335,4 +1334,349 @@ select:focus {
 		transition-duration: 0.01ms !important;
 		scroll-behavior: auto !important;
 	}
+}
+/* Services Page Specific Styles */
+.section-padding {
+    padding: 5rem 0;
+}
+
+.hero-banner-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/services-hero.webp');
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    color: var(--neutral-3);
+    text-align: center;
+}
+
+.hero-banner-section .hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.hero-banner-section .hero-subtitle {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.solutions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.text-content {
+    order: 2;
+}
+
+.image-content {
+    order: 1;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.image-wrapper {
+    position: relative;
+    padding-top: 75%; /* 4:3 aspect ratio */
+}
+
+.image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(42, 142, 42, 0.2), rgba(42, 142, 42, 0.6));
+}
+
+.solution-features {
+    margin: 2rem 0;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.solutions-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.solution-card {
+    background: var(--neutral-3);
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.solution-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--primary-1);
+}
+
+.solution-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-icon {
+    margin-bottom: 1.5rem;
+}
+
+.solution-card h2 {
+    color: var(--primary-2);
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+.solution-card p {
+    margin-bottom: 2rem;
+    color: var(--secondary-2);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.services-list ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.services-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: rgba(99, 167, 82, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.services-list li:hover {
+    background: rgba(99, 167, 82, 0.2);
+    transform: translateX(5px);
+}
+
+.cta-card {
+    background: var(--primary-1);
+    color: var(--neutral-3);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.cta-card h3 {
+    color: var(--neutral-3);
+    margin-bottom: 1rem;
+}
+
+.comparison-tabs {
+    margin: 3rem 0;
+}
+
+.tab-buttons {
+    display: flex;
+    border-bottom: 2px solid var(--neutral-1);
+    margin-bottom: 2rem;
+}
+
+.tab-button {
+    padding: 0.75rem 1.5rem;
+    background: none;
+    border: none;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--secondary-2);
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-button:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-1);
+    transition: width 0.3s ease;
+}
+
+.tab-button.active {
+    color: var(--primary-1);
+}
+
+.tab-button.active:after {
+    width: 100%;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.comparison-list {
+    list-style: none;
+}
+
+.comparison-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-left: 2rem;
+}
+
+.comparison-list li:before {
+    content: '•';
+    color: var(--primary-1);
+    font-size: 2rem;
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+}
+
+.case-study {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 2rem;
+    color: var(--secondary-2);
+}
+
+.cost-cards .cards-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.cost-card {
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.cost-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-2);
+    margin: 1rem 0;
+}
+
+.green-card .cost-amount {
+    color: var(--primary-1);
+}
+
+.savings-badge {
+    background: var(--primary-1);
+    color: var(--neutral-3);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.testimonial-card {
+    background: var(--neutral-3);
+    padding: 3rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial-card svg {
+    margin-bottom: 1rem;
+}
+
+.testimonial-card blockquote {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.testimonial-card cite {
+    font-weight: 600;
+    color: var(--primary-1);
+}
+
+.section-title span {
+    color: var(--primary-1);
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .solutions-grid {
+        grid-template-columns: 3fr 1fr;
+    }
+    
+    .text-content {
+        order: 1;
+    }
+    
+    .image-content {
+        order: 2;
+    }
+    
+    .solutions-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .services-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    .services-list ul {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .cost-cards .cards-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .hero-banner-section {
+        min-height: 60vh;
+    }
+    
+    .services-list ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

@@ -21,7 +21,7 @@ get_header();
     <!-- Spills Happen Section -->
     <section id="spills-happen" class="spills-happen-section">
         <div class="spills-content">
-            <div class="text-content">
+            <div class="text-content-1">
                 <h2>SPILLS HAPPEN</h2>
                 <p>Oil spills are an inevitable part of the industrial sector. Clean-Up Green is the safe effective way of permanently cleaning all types of spills. Clean-Up Green will save you time and expensive cleanup costs.</p>
                 <a href="#" class="btn">Learn More</a>
