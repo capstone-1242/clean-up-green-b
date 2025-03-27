@@ -24,42 +24,47 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'cleeanupgreen' ); ?></a>
+    <header id="masthead" class="site-header">
+    <div class="header-container">
+        <div class="site-branding">
+            <?php
+            the_custom_logo();
+            if ( is_front_page() && is_home() ) :
+                ?>
+                <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                <?php
+            else :
+                ?>
+                <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+                <?php
+            endif;
+            $cleeanupgreen_description = get_bloginfo( 'description', 'display' );
+            if ( $cleeanupgreen_description || is_customize_preview() ) :
+                ?>
+                <p class="site-description"><?php echo $cleeanupgreen_description; ?></p>
+            <?php endif; ?>
+        </div>
 
-	<header id="masthead" class="site-header">
-		<div class="header-container">
-			<!-- Logo on the left -->
-			<div class="site-branding">
-				<?php
-				the_custom_logo();
-				if ( is_front_page() && is_home() ) :
-					?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php
-				else :
-					?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php
-				endif;
-				$cleeanupgreen_description = get_bloginfo( 'description', 'display' );
-				if ( $cleeanupgreen_description || is_customize_preview() ) :
-					?>
-					<p class="site-description"><?php echo $cleeanupgreen_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-				<?php endif; ?>
-			</div><!-- .site-branding -->
+        <div class="header-right">
+            <nav id="site-navigation" class="main-navigation">
+                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                    <span class="menu-toggle-icon"></span>
+                    <span class="screen-reader-text"><?php esc_html_e( 'Primary Menu', 'cleeanupgreen' ); ?></span>
+                </button>
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'menu-1',
+                        'menu_id'        => 'primary-menu',
+                        'container_class' => 'menu-container',
+                        'link_before'    => '<span class="menu-item-text">',
+                        'link_after'     => '</span>',
+                    )
+                );
+                ?>
+            </nav>
+        </div>
+    </div>
+</header>
 
-			<!-- Navigation and Cart Icon on the right -->
-			<div class="header-right">
-				<nav id="site-navigation" class="main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'cleeanupgreen' ); ?></button>
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-						)
-					);
-					?>
-				</nav><!-- #site-navigation -->
-			</div><!-- .header-right -->
-		</div><!-- .header-container -->
-	</header><!-- #masthead -->
+    
