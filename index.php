@@ -42,23 +42,25 @@ get_header();
 
     <!-- Why Choose Us Section -->
     <section id="why-choose-us" class="why-choose-us-section">
-        <h2>WHY CHOOSE US?</h2>
-        <div class="cards-container">
-            <div class="card">
-                <h3>Safe for the environment!</h3>
-                <p>Clean-Up Green offers Oil Solutions products that meet and exceed the standard of the US EPA Method 1311 (recognized in Canada).</p>
-            </div>
-            <div class="card">
-                <h3>Green Technology</h3>
-                <p>Clean-Up Green offers groundbreaking patented Oil Solutions product technology to the Canadian market.</p>
-            </div>
-            <div class="card">
-                <h3>Easy to use</h3>
-                <p>Clean-up green is one of the easiest ways of removing oil spills for both industrial and residential spills. All the products are labelled with clear instructions for the application of product.</p>
-            </div>
-            <div class="card">
-                <h3>Best Pricing Available</h3>
-                <p>At Clean-Up Green, the products available to the customer are estimated to be 52% cheaper than related products in the market.</p>
+        <div class= "max-width-container">
+            <h2>WHY CHOOSE US?</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Safe for the environment!</h3>
+                    <p>Clean-Up Green offers Oil Solutions products that meet and exceed the standard of the US EPA Method 1311 (recognized in Canada).</p>
+                </div>
+                <div class="card">
+                    <h3>Green Technology</h3>
+                    <p>Clean-Up Green offers groundbreaking patented Oil Solutions product technology to the Canadian market.</p>
+                </div>
+                <div class="card">
+                    <h3>Easy to use</h3>
+                    <p>Clean-up green is one of the easiest ways of removing oil spills for both industrial and residential spills. All the products are labelled with clear instructions for the application of product.</p>
+                </div>
+                <div class="card">
+                    <h3>Best Pricing Available</h3>
+                    <p>At Clean-Up Green, the products available to the customer are estimated to be 52% cheaper than related products in the market.</p>
+                </div>
             </div>
         </div>
     </section>

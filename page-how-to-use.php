@@ -21,7 +21,6 @@ get_header();
             <ul>
                 <li><a href="#clean-up-green-2-step-os-liquid">Clean-Up Green 2 Step OS Liquid</a></li>
                 <li><a href="#clean-up-green-os-powder">Clean-Up Green OS Powder</a></li>
-                <li><a href="#clean-up-green-oil-sheen-remover">Clean-Up Green Oil Sheen Remover</a></li>
             </ul>
         </div>
     </nav>
@@ -33,6 +32,18 @@ get_header();
             <div class="instruction-content">
                 <h2>Clean-Up Green 2 Step OS Liquid</h2>
                 <p class="product-description">Clean-Up Green Oil Two Step Liquid is used for stains on all surfaces including rock, concrete, asphalt, and wood. It also helps eliminate oil smells.</p>
+
+                <div class="video-container">
+                 <div class="video-wrapper">
+                 <div class="video-title">Cleaning a Fuel Spill in Water</div>
+                 <iframe class="video-iframe" src="https://www.youtube.com/embed/mPrdrc5xsFs?autoplay=1&mute=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+        
+                <div class="video-wrapper">
+                 <div class="video-title">Cleaning an Oil Spill on Soil</div>
+                 <iframe class="video-iframe" src="https://www.youtube.com/embed/cz3Vy16nwP0?autoplay=1&mute=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 </div>
+               </div>
                 
                 <div class="features-box">
                     <h3>Key Features:</h3>
@@ -68,7 +79,17 @@ get_header();
             <div class="instruction-content">
                 <h2>Clean-Up Green OS Powder</h2>
                 <p class="product-description">Clean-Up Green Oil Spill Powder is used for all types of pooling oil spills. It works on hard surfaces such as asphalt, concrete or compacted soil, and also on water.</p>
-                
+                <div class="video-container">
+                 <div class="video-wrapper">
+                 <div class="video-title">Cleaning a Fuel Spill in Water</div>
+                 <iframe class="video-iframe" src="https://www.youtube.com/embed/mPrdrc5xsFs?autoplay=1&mute=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+        
+                <div class="video-wrapper">
+                 <div class="video-title">Cleaning an Oil Spill on Soil</div>
+                 <iframe class="video-iframe" src="https://www.youtube.com/embed/cz3Vy16nwP0?autoplay=1&mute=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 </div>
+               </div>
                 <div class="features-box">
                     <h3>Key Features:</h3>
                     <ul>
@@ -92,38 +113,6 @@ get_header();
                 <div class="removal-steps">
                     <h3>Removal:</h3>
                     <p>The longer the wait time, the greater the absorption and the more solid the polymer will become. The product may be picked up as a rubber-like mat for easy disposal. Excess white powder can be reused. Hydrocarbons and synthetic oils require more time before removal and will form into a softer cluster. In most cases, removal may begin in as few as 5 minutes. For stained surfaces or where the spill has been absorbed into soil or hard surfaces, apply Clean-Up Green Oil Stain Liquid to complete the clean-up process.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Clean-Up Green Oil Sheen Remover Section -->
-        <section id="clean-up-green-oil-sheen-remover" class="product-instruction">
-            <div class="instruction-content">
-                <h2>Clean-Up Green Oil Sheen Remover</h2>
-                <p class="product-description">Easily remove rainbow sheen after a fuelling overfill on water.</p>
-                
-                <div class="features-box">
-                    <h3>Key Features:</h3>
-                    <ul>
-                        <li>Safe to clean gas and oil from fiberglass and aluminum hulls</li>
-                        <li>Perfect for marine use anywhere around water</li>
-                        <li>Environmentally safe complete encapsulation</li>
-                        <li>Naturally bio-degrades the hydrocarbons leaving water clean</li>
-                    </ul>
-                </div>
-                
-                <div class="application-steps">
-                    <h3>Application</h3>
-                    <p>Spray some solution on the object having spill and immediately start scrubing gently on the object or Surface with the spill.</p>
-                </div>
-                
-                <div class="removal-steps">
-                    <h3>Removal</h3>
-                    <p>Dont wait Too long after scrubing it clean it with water and cotton cloth.</p>
-                </div>
-                
-                <div class="note-box">
-                    <p>Repeat the steps again if the object is not fully cleaned.</p>
                 </div>
             </div>
         </section>
