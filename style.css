@@ -1379,6 +1379,10 @@ cite {
     margin-bottom: 15px;
 }
 
+.contact-us-form {
+    flex: 1;
+}
+
 .send-button {
     width: 100%;
     padding: 12px;
