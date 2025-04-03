@@ -1285,22 +1285,6 @@ cite {
         height: 1.75rem;
     }
 }
-<<<<<<< HEAD
-/* shop page */
-.ast-woocommerce-container{
-    display: flex;
-    justify-content: center;
-}
-=======
-
-
-
-<<<<<<< HEAD
-
-
->>>>>>> 866e9fd92f2c8d244d8bad76289b200319287d71
-=======
->>>>>>> 0598ea3a0a39772b00c826f9f131e5aa8f0dd5b1
 /* Contact */
 
 .contact {
@@ -1410,10 +1394,19 @@ cite {
 
 .contact-container {
     display: flex;
-     gap: 50px; 
-     max-width: 1200px; 
-     margin: 50px auto; 
-     padding: 0 20px;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    gap: 50px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content inside */
+    text-align: center; /* Ensures text is also centered */
 }
 
 
