@@ -5,7 +5,7 @@
 get_header();
 ?>
 
-<main>
+<main class="contact">
     <div class="contact-container">
         <!-- Contact Form Column -->
         <div class="contact-us-form" style="flex: 1;">
