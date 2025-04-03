@@ -39,7 +39,7 @@ get_header();
         
         <div class="image-content">
             <div class="image-wrapper">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/solutions-image.webp" alt="Our Solutions" loading="lazy">
+                <img src="https://clean-up-green-b.web.dmitcapstone.ca/wp-content/uploads/2025/04/solution-cleaning-300x200.webp">
             </div>
         </div>
     </div>

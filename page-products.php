@@ -34,7 +34,7 @@ get_header();
                 for ($i = 1; $i <= 1; $i++) : ?>
                 <article class="product-card">
                     <div class="product-image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product-<?php echo $i; ?>.webp" alt="Product <?php echo $i; ?>" loading="lazy">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/cug-liquid" alt="Product <?php echo $i; ?>" loading="lazy">
                     </div>
                     <div class="product-details">
                         <h3>Clean-Up Green 2 Step OS Liquid</h3>
@@ -67,7 +67,7 @@ get_header();
                 <?php for ($i = 2; $i <= 2; $i++) : ?>
                 <article class="product-card">
                     <div class="product-image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product-<?php echo $i; ?>.webp" alt="Product <?php echo $i; ?>" loading="lazy">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/cug-powder-bags" alt="Product <?php echo $i; ?>" loading="lazy">
                     </div>
                     <div class="product-details">
                         <h3>Clean-Up Green OS Powder</h3>

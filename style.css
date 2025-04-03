@@ -366,7 +366,7 @@ section {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    max-width: 35%;
+    max-width: 80%;
 }
 
 .image-content img {
@@ -741,7 +741,7 @@ cite {
 }
 
 .product-image {
-    height: 250px;
+    height: 350px;
     overflow: hidden;
 }
 
@@ -1285,9 +1285,22 @@ cite {
         height: 1.75rem;
     }
 }
+<<<<<<< HEAD
+/* shop page */
+.ast-woocommerce-container{
+    display: flex;
+    justify-content: center;
+}
+=======
 
 
 
+<<<<<<< HEAD
+
+
+>>>>>>> 866e9fd92f2c8d244d8bad76289b200319287d71
+=======
+>>>>>>> 0598ea3a0a39772b00c826f9f131e5aa8f0dd5b1
 /* Contact */
 
 .contact {
@@ -1476,6 +1489,7 @@ cite {
 /* Product Grid Layout */
 .woocommerce ul.products {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px;
+    padding: 5rem 0rem;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 50px;
 }
