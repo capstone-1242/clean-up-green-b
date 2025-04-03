@@ -1285,12 +1285,31 @@ cite {
         height: 1.75rem;
     }
 }
+<<<<<<< HEAD
 /* shop page */
 .ast-woocommerce-container{
     display: flex;
     justify-content: center;
 }
+=======
+
+
+
+
+
+>>>>>>> 866e9fd92f2c8d244d8bad76289b200319287d71
 /* Contact */
+
+.contact h2 {
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 2rem;
+}
+
+.contact p {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.25rem;
+}
+
 .contact-flex {
     display: flex;
     justify-content: center;
@@ -1374,7 +1393,16 @@ cite {
 }
 
 .send-button:hover {
-    background-color: #333333;
+    background-color: #63A752;
+    color: #000;
+}
+
+.contact-container {
+    display: flex;
+     gap: 50px; 
+     max-width: 1200px; 
+     margin: 50px auto; 
+     padding: 0 20px;
 }
 
 
