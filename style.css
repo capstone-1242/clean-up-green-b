@@ -1287,6 +1287,9 @@ cite {
 }
 
 
+
+
+
 /* Contact */
 .contact-flex {
     display: flex;
@@ -1371,7 +1374,16 @@ cite {
 }
 
 .send-button:hover {
-    background-color: #333333;
+    background-color: #63A752;
+    color: #000;
+}
+
+.contact-container {
+    display: flex;
+     gap: 50px; 
+     max-width: 1200px; 
+     margin: 50px auto; 
+     padding: 0 20px;
 }
 
 

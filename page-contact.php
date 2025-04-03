@@ -6,7 +6,7 @@ get_header();
 ?>
 
 <main>
-    <div class="contact-container" style="display: flex; gap: 50px; max-width: 1200px; margin: 50px auto; padding: 0 20px;">
+    <div class="contact-container">
         <!-- Contact Form Column -->
         <div class="contact-us-form" style="flex: 1;">
             <h2>Contact Us</h2>
@@ -31,7 +31,7 @@ get_header();
                     <textarea id="message" name="message" required></textarea>
                 </div>
                 
-                <button type="submit" style="width: 100%; padding: 12px; background-color: #000000; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; transition: background-color;">Send</button>
+                <button type="submit" class="send-button">Send</button>
             </form>
         </div>
 
