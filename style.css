@@ -1288,9 +1288,11 @@ cite {
 
 
 
-
-
 /* Contact */
+
+.contact {
+    margin-top: 5rem;
+}
 
 .contact h2 {
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
