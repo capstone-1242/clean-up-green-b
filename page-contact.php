@@ -36,7 +36,7 @@ get_header();
         </div>
 
         <!-- Contact Information Column -->
-        <div class="contact-info" style="flex: 1;">
+        <div class="contact-info">
             <div class="info-block">
                 <p>36, 52502 RR 25<br>
                 Parkland County, AB<br>

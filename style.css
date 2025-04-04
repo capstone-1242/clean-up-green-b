@@ -1285,26 +1285,9 @@ cite {
         height: 1.75rem;
     }
 }
-<<<<<<< HEAD
-/* shop page */
-.ast-woocommerce-container{
-    display: flex;
-    justify-content: center;
-}
-=======
-
-
-
-<<<<<<< HEAD
-
-
->>>>>>> 866e9fd92f2c8d244d8bad76289b200319287d71
-=======
->>>>>>> 0598ea3a0a39772b00c826f9f131e5aa8f0dd5b1
-
 
 /* Contact */
-/* 
+
 .contact {
     margin-top: 5rem;
 }
@@ -1319,97 +1302,6 @@ cite {
     font-size: 1.25rem;
 }
 
-.contact-flex {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin: 50px auto;
-    padding: 0 50px;
-    max-width: 1200px;
-}
-
-.contact-form {
-    flex: 1;
-    padding: 30px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #000000;
-    border-radius: 4px;
-}
-
-.form-group textarea {
-    height: 150px;
-}
-
-.submit-btn {
-    width: 100%;
-    background: #000;
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.submit-btn:hover {
-    background: #333;
-}
-
-.company-info {
-    flex: 1;
-    padding: 30px;
-}
-
-.company-logo {
-    max-width: 250px;
-    margin-bottom: 30px;
-}
-
-.info {
-    line-height: 1.6;
-}
-
-.company-name {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.contact-us-form {
-    flex: 1;
-}
-
-.send-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #000000;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.send-button:hover {
-    background-color: #63A752;
-    color: #000;
-}
-
 .contact-container {
     display: flex;
     justify-content: center; 
@@ -1421,18 +1313,16 @@ cite {
 }
 
 .contact-info {
+    flex: 1;
     display: flex;
-    flex-direction: column;
-    align-items: center; 
-    text-align: center;*/
-} */
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+}
 
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .contact-flex {
-        flex-direction: column;
-    }
+.info-block {
+    text-align: center;
+    width: 100%;
 }
 
 /* Form Styles */
