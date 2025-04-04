@@ -9,7 +9,7 @@ get_header();
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content container">
-            <h1>Our Products</h1>
+            <h1>OUR PRODUCTS</h1>
             <p>Clean-Up Green oil solutions products come in a two-step liquid solution and powder form. Each form has its designated use.</p>
         </div>
     </section>

@@ -10,7 +10,7 @@ get_header();
     <!-- Hero Section -->
     <section class="page-hero">
         <div class="hero-content">
-            <h1>How to Use</h1>
+            <h1>HOW TO USE</h1>
             <p>Find out how to use Clean-Up Green products by selecting one of the options below.</p>
         </div>
     </section>
