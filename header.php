@@ -28,7 +28,18 @@
     <div class="header-container">
         <div class="site-branding">
             <?php
-            the_custom_logo();
+            // Custom logo with increased size
+            if ( has_custom_logo() ) :
+                $logo_id = get_theme_mod( 'custom_logo' );
+                $logo = wp_get_attachment_image_src( $logo_id , 'full' );
+                $logo_alt = get_post_meta( $logo_id, '_wp_attachment_image_alt', true );
+                ?>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="custom-logo-link" rel="home">
+                    <img src="<?php echo esc_url( $logo[0] ); ?>" alt="<?php echo esc_attr( $logo_alt ); ?>" class="custom-logo" style="max-height: 50px; width: auto;">
+                </a>
+                <?php
+            endif;
+            
             if ( is_front_page() && is_home() ) :
                 ?>
                 <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -66,5 +77,3 @@
         </div>
     </div>
 </header>
-
-    

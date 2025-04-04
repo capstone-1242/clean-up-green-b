@@ -202,7 +202,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0rem 2rem;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -263,16 +263,51 @@ section {
 /* ==========================================================================
    Footer
    ========================================================================== */
+
+.footer-heading{
+    color: var(--neutral-3);
+}
 .site-footer {
     background-color: var(--neutral-2);
     color: var(--neutral-3);
     padding: 4rem 0 0;
 }
+/* Footer Logo Styles */
+.footer-branding {
+    display: flex;
+    align-items: center; /* Vertical centering */
+    gap: 20px;
+}
+
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.footer-logo {
+    max-height: 80px; 
+    width: auto;
+    max-width: 180px; 
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .footer-branding {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-logo {
+        max-height: 60px;
+        margin-bottom: 15px;
+    }
+}
 
 .footer-container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 8rem;
 }
 
 .footer-widgets {
@@ -303,6 +338,22 @@ section {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 2rem 0;
     text-align: center;
+}
+.footer-social{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.social-links{
+    display: flex;
+    gap: 2rem;
+}
+.footer-legal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 
 /* ==========================================================================
@@ -561,9 +612,16 @@ div.max-width-container{
     cursor: pointer;
     position: relative;
 }
+.tab-btn:hover{
+    color: var(--primary-1);
+    
+    background-color: var(--neutral-2) !important;
+    
+}
 
 .tab-btn.active {
     color: var(--primary-1);
+    background-color: var(--neutral-2) !important;
 }
 
 .tab-btn.active::after {
@@ -607,6 +665,9 @@ div.max-width-container{
     background: var(--primary-1);
     border-radius: 50%;
 }
+.white{
+    color: var(--neutral-3);
+}
 
 /* Cost Cards */
 .cards-container {
@@ -633,10 +694,6 @@ div.max-width-container{
     font-weight: 700;
     margin: 1rem 0;
     color: var(--primary-1);
-}
-
-.highlight .cost {
-    color: var(--neutral-3);
 }
 
 .badge {
@@ -969,8 +1026,9 @@ cite {
     background-size: cover;
     background-position: center;
     color: var(--neutral-3);
-    padding: 8rem 0;
-    text-align: center;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
 }
 
 #how-to-use-page .hero-content {

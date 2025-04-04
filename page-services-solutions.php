@@ -101,7 +101,7 @@ get_header();
 <!-- Cost Comparison Section -->
 <section id="cost-comparison" class="section-padding bg-dark">
     <div class="container">
-        <h2 class="section-title text-center">Cost <span>Comparison</span></h2>
+        <h2 class="section-title text-center white">Cost <span>Comparison</span></h2>
         <p class="text-center">See how Clean-Up Green saves you time and money</p>
         
         <div class="tabbed-content">

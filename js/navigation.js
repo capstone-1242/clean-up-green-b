@@ -122,3 +122,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabPanels.forEach(panel => panel.classList.remove('active'));
+            
+            this.classList.add('active');
+            
+            
+            const tabId = this.getAttribute('data-tab');
+            const activePanel = document.getElementById(tabId);
+            if (activePanel) {
+                activePanel.classList.add('active');
+            }
+        });
+    });
+});
