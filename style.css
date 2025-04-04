@@ -366,7 +366,7 @@ section {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    max-width: 80%;
+    max-width: 35%;
 }
 
 .image-content img {
@@ -741,7 +741,7 @@ cite {
 }
 
 .product-image {
-    height: 350px;
+    height: 250px;
     overflow: hidden;
 }
 
@@ -1286,6 +1286,8 @@ cite {
     }
 }
 
+
+
 /* Contact */
 
 .contact {
@@ -1302,99 +1304,174 @@ cite {
     font-size: 1.25rem;
 }
 
+.contact-flex {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 50px auto;
+    padding: 0 50px;
+    max-width: 1200px;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #000;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background: #333;
+}
+
+.company-info {
+    flex: 1;
+    padding: 30px;
+}
+
+.company-logo {
+    max-width: 250px;
+    margin-bottom: 30px;
+}
+
+.info {
+    line-height: 1.6;
+}
+
+.company-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.send-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #63A752;
+    color: #000;
+}
+
 .contact-container {
     display: flex;
-    justify-content: center; 
-    align-items: center;
-    gap: 50px;
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 0 20px;
+     gap: 50px; 
+     max-width: 1200px; 
+     margin: 50px auto; 
+     padding: 0 20px;
 }
 
-.contact-info {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: pink;
-}
 
-.info-block {
-    text-align: center;
-    width: 100%;
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .contact-flex {
+        flex-direction: column;
+    }
 }
 
 /* Form Styles */
-/* .contact-us-form .form-field {
+.contact-us-form .form-field {
     margin-bottom: 20px;
 }
 
 .contact-us-form .form-field label {
     display: block;
     margin-bottom: 5px;
-} */
+}
 
-/* .contact-us-form .form-field input,
+.contact-us-form .form-field input,
 .contact-us-form .form-field textarea {
     width: 100%;
     padding: 10px;
     border: 2px solid #000000;
     border-radius: 4px;
     box-shadow: none;
-} */
+}
 
 
 /* Product Title */
-/* .woocommerce ul.products li.product .woocommerce-loop-product__title,
+.woocommerce ul.products li.product .woocommerce-loop-product__title,
 .woocommerce-loop-product__title {
     color: #5E8901;
     font-size: 18px;
-} */
+}
 
 /* Single Product Title */
-/* .woocommerce div.product .product_title {
+.woocommerce div.product .product_title {
     color: #5E8901;
-} */
+}
 
 /* Product Price */
-/* .woocommerce ul.products li.product .price {
+.woocommerce ul.products li.product .price {
     color: #000;
     font-weight: bold;
-} */
+}
 
-/* .woocommerce .star-rating {
+.woocommerce .star-rating {
     color: #000; 
-} */
+}
 
 
 /* Add to Cart Button */
-/* .woocommerce ul.products li.product .button {
+.woocommerce ul.products li.product .button {
     display: block;
     margin-top: 1em;
-    width: 0%;
+    width: 50%;
     text-align: center;
     background-color: #000;
     color: white;
     order: 4;
     clear: both;
-} */
+}
 
 /* Ensure price and rating have proper spacing */
-/* .woocommerce ul.products li.product .price,
+.woocommerce ul.products li.product .price,
 .woocommerce ul.products li.product .star-rating {
     display: block;
     margin-bottom: 0.5em;
-} */
+}
 
 /* Product Grid Layout */
-/* .woocommerce ul.products {
+.woocommerce ul.products {
     display: grid;
-    padding: 5rem 0rem;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 50px;
-} */
-
-
-
-
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}
