@@ -1301,8 +1301,10 @@ cite {
 >>>>>>> 866e9fd92f2c8d244d8bad76289b200319287d71
 =======
 >>>>>>> 0598ea3a0a39772b00c826f9f131e5aa8f0dd5b1
-/* Contact */
 
+
+/* Contact */
+/* 
 .contact {
     margin-top: 5rem;
 }
@@ -1410,8 +1412,8 @@ cite {
 
 .contact-container {
     display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
+    justify-content: center; 
+    align-items: center;
     gap: 50px;
     max-width: 1200px;
     margin: 50px auto;
@@ -1421,9 +1423,9 @@ cite {
 .contact-info {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers the content inside */
-    text-align: center; /* Ensures text is also centered */
-}
+    align-items: center; 
+    text-align: center;*/
+} */
 
 
 /* Mobile Responsive */
@@ -1434,71 +1436,75 @@ cite {
 }
 
 /* Form Styles */
-.contact-us-form .form-field {
+/* .contact-us-form .form-field {
     margin-bottom: 20px;
 }
 
 .contact-us-form .form-field label {
     display: block;
     margin-bottom: 5px;
-}
+} */
 
-.contact-us-form .form-field input,
+/* .contact-us-form .form-field input,
 .contact-us-form .form-field textarea {
     width: 100%;
     padding: 10px;
     border: 2px solid #000000;
     border-radius: 4px;
     box-shadow: none;
-}
+} */
 
 
 /* Product Title */
-.woocommerce ul.products li.product .woocommerce-loop-product__title,
+/* .woocommerce ul.products li.product .woocommerce-loop-product__title,
 .woocommerce-loop-product__title {
     color: #5E8901;
     font-size: 18px;
-}
+} */
 
 /* Single Product Title */
-.woocommerce div.product .product_title {
+/* .woocommerce div.product .product_title {
     color: #5E8901;
-}
+} */
 
 /* Product Price */
-.woocommerce ul.products li.product .price {
+/* .woocommerce ul.products li.product .price {
     color: #000;
     font-weight: bold;
-}
+} */
 
-.woocommerce .star-rating {
+/* .woocommerce .star-rating {
     color: #000; 
-}
+} */
 
 
 /* Add to Cart Button */
-.woocommerce ul.products li.product .button {
+/* .woocommerce ul.products li.product .button {
     display: block;
     margin-top: 1em;
-    width: 50%;
+    width: 0%;
     text-align: center;
     background-color: #000;
     color: white;
     order: 4;
     clear: both;
-}
+} */
 
 /* Ensure price and rating have proper spacing */
-.woocommerce ul.products li.product .price,
+/* .woocommerce ul.products li.product .price,
 .woocommerce ul.products li.product .star-rating {
     display: block;
     margin-bottom: 0.5em;
-}
+} */
 
 /* Product Grid Layout */
-.woocommerce ul.products {
+/* .woocommerce ul.products {
     display: grid;
     padding: 5rem 0rem;
     grid-template-columns: repeat(2, 1fr); 
     gap: 50px;
-}
+} */
+
+
+
+
