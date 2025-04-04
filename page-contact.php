@@ -1,14 +1,14 @@
 <?php
 /**
- * Template Name: Contact us
+ * Template Name: Contact Us
  */
 get_header();
 ?>
 
 <main class="contact">
-    <div class="contact-container">
+    <div class="contact-container" style="display: flex; flex-wrap: wrap; gap: 40px;">
         <!-- Contact Form Column -->
-        <div class="contact-us-form" style="flex: 1;">
+        <div class="contact-us-form" style="flex: 1; min-width: 300px;">
             <h2>Contact Us</h2>
             <form>
                 <div class="form-field">
@@ -36,7 +36,7 @@ get_header();
         </div>
 
         <!-- Contact Information Column -->
-        <div class="contact-info" style="flex: 1;">
+        <div class="contact-info" style="flex: 1; min-width: 300px;">
             <div class="info-block">
                 <p>36, 52502 RR 25<br>
                 Parkland County, AB<br>

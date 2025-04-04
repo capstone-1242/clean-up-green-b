@@ -417,7 +417,7 @@ section {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    max-width: 80%;
+    max-width: 35%;
 }
 
 .image-content img {
@@ -798,7 +798,7 @@ cite {
 }
 
 .product-image {
-    height: 350px;
+    height: 250px;
     overflow: hidden;
 }
 
@@ -1344,11 +1344,7 @@ cite {
     }
 }
 
-/* shop page */
-.ast-woocommerce-container{
-    display: flex;
-    justify-content: center;
-}
+
 
 /* Contact */
 
@@ -1435,10 +1431,6 @@ cite {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 15px;
-}
-
-.contact-us-form {
-    flex: 1;
 }
 
 .send-button {
@@ -1538,7 +1530,6 @@ cite {
 /* Product Grid Layout */
 .woocommerce ul.products {
     display: grid;
-    padding: 5rem 0rem;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 50px;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
 }
