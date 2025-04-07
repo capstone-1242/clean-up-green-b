@@ -21,7 +21,7 @@ Text Domain: cleanupgreen
         --neutral-2: #333333;
     --neutral-3: #FFFFFF;
     --accent: #FFD700;
-
+ 
     /* Typography */
     --font-main: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     --font-heading: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
@@ -2157,3 +2157,5 @@ cite {
     grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
 }
+
+
