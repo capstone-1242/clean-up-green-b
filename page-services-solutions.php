@@ -34,7 +34,7 @@ get_header();
                     <span>Safe for all surfaces</span>
                 </div>
             </div>
-            <a href="#" class="btn">Explore Now</a>
+            <a href="shop" class="btn">Buy Now</a>
         </div>
         
         <div class="image-content">
@@ -52,7 +52,7 @@ get_header();
             </div>
             <h3>HOME SOLUTIONS</h3>
             <p>We know oil spills and stains can be an annoying problem around the house. We offer a complete line of household solutions for stains and spills of all sizes.</p>
-            <a href="#" class="btn btn-outline">Explore Now</a>
+            <a href="shop" class="btn btn-outline">Try Now</a>
         </div>
         
         <div class="solution-card">
@@ -61,7 +61,7 @@ get_header();
             </div>
             <h3>INDUSTRIAL SOLUTIONS</h3>
             <p>Oil spills are an inevitable part of the industrial sector. Left unchecked, these spills quickly become time-consuming and costly to clean.</p>
-            <a href="#" class="btn btn-outline">Explore Now</a>
+            <a href="shop" class="btn btn-outline">Try Now</a>
         </div>
     </div>
 </section>

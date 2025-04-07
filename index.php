@@ -14,7 +14,7 @@ get_header();
         <div class="hero-content">
             <h1>REMOVE ANY OIL Hello<span>FROM ANY SURFACE</span></h1>
             <p>Clean-up Green can help you clean the oil spills from any surface without putting in extra effort.</p>
-            <a href="#" class="btn">Purchase Now</a>
+            <a href="shop" class="btn">Purchase Now</a>
         </div>
     </section>
 
@@ -24,7 +24,7 @@ get_header();
             <div class="text-content-1">
                 <h2>SPILLS HAPPEN</h2>
                 <p>Oil spills are an inevitable part of the industrial sector. Clean-Up Green is the safe effective way of permanently cleaning all types of spills. Clean-Up Green will save you time and expensive cleanup costs.</p>
-                <a href="#" class="btn">Learn More</a>
+                <a href="services-and-solutions" class="btn">View Solutions</a>
             </div>
             <div class="image-content">
                 <img src="https://clean-up-green-b.web.dmitcapstone.ca/wp-content/uploads/2025/03/oil-on-glove.webp" alt="Spills Happen Image">
@@ -36,7 +36,7 @@ get_header();
     <section id="solutions" class="solutions-section">
         <div class="solutions-content">
             <h2>SAVE TIME AND MONEY WITH JUST RIGHT SOLUTIONS</h2>
-            <a href="#" class="btn">Explore Now</a>
+            <a href="products" class="btn">Explore Now</a>
         </div>
     </section>
 
@@ -70,7 +70,7 @@ get_header();
         <div class="science-content">
             <h2>SCIENCE BEHIND THE MAGIC</h2>
             <p>Unlike traditional oil spill products that only absorb oil spills and stains, Clean-Up Green encapsulates the hydrocarbons therefore rendering it non-hazardous. This allows the encapsulated oil waste to be discarded as normal household waste! No more expensive clean up and disposal needed.</p>
-            <a href="#" class="btn">Save now</a>
+            <a href="shop" class="btn">Save now</a>
         </div>
     </section>
 

@@ -48,8 +48,8 @@ get_header();
                         </ul>
                         
                         <div class="product-actions">
-                            <a href="#" class="btn btn-outline">Details</a>
-                            <a href="#" class="btn">Add to Cart</a>
+                            <a href="how-to-use/#clean-up-green-2-step-os-liquid" class="btn btn-outline">How to use?</a>
+                            <a href="cart" class="btn">Add to Cart</a>
                         </div>
                     </div>
                 </article>
@@ -81,8 +81,8 @@ get_header();
                         </ul>
                         
                         <div class="product-actions">
-                            <a href="#" class="btn btn-outline">Details</a>
-                            <a href="#" class="btn">Add to Cart</a>
+                            <a href="how-to-use/#clean-up-green-os-powder" class="btn btn-outline">How to use?</a>
+                            <a href="shop" class="btn">Add to Cart</a>
                         </div>
                     </div>
                 </article>
