@@ -12,7 +12,7 @@ get_header();
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
         <div class="hero-content">
-            <h1>REMOVE ANY OIL Hello<span>FROM ANY SURFACE</span></h1>
+            <h1>REMOVE ANY OIL<span>FROM ANY SURFACE</span></h1>
             <p>Clean-up Green can help you clean the oil spills from any surface without putting in extra effort.</p>
             <a href="shop" class="btn">Purchase Now</a>
         </div>
