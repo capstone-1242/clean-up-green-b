@@ -413,7 +413,11 @@ section {
 .text-content-1 {
     flex: 1;
     max-width: 50%;
+}
+@media (min-width: 1080px) {
+    .text-content-1{
     padding: 3rem 5rem;
+}
 }
 
 .image-content {
@@ -802,7 +806,7 @@ cite {
 }
 
 .product-image {
-    height: 250px;
+    height: 350px;
     overflow: hidden;
 }
 
@@ -919,10 +923,15 @@ cite {
 }
 
 @media (max-width: 768px) {
-    section {
-        padding: 3rem 0;
+    .product-card{
+        width: 100%;
     }
-    
+    section {
+        padding: 3rem 0.5rem;
+    }
+    .science-section{
+        padding: 3rem 2rem;
+    }
     .menu-toggle {
         display: block;
     }
@@ -945,12 +954,11 @@ cite {
         align-items: center;
     }
     .menu-item-text{
-        padding: 0rem 9rem;
+        padding: 0rem 8rem;
     }
     
     .hero-content {
         padding: 0 2rem;
-        text-align: center;
     }
     
     .grid-layout,
@@ -965,6 +973,16 @@ cite {
     .cta-card {
         position: static;
     }
+    div.max-width-container{
+        padding: 0rem;
+    }
+    div.max-width-container h2{
+        text-align: center;
+    }
+    .cards-container{
+        grid-template-columns: 1fr;
+    }
+    
 }
 
 @media (max-width: 480px) {
@@ -1070,7 +1088,7 @@ cite {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 1rem;
     overflow-x: auto;
     display: flex;
     justify-content: center;
@@ -1353,7 +1371,23 @@ cite {
     }
 }
 
-
+/* shop */
+div.shop{
+    padding: 5rem 6rem;
+}
+.woocommerce-result-count{
+    display: none;
+}
+ul.products {
+    grid-template-columns: 1fr 1fr !important; 
+    list-style: none;
+}
+@media (max-width: 768px){
+    ul.products{
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+}
 
 /* Contact */
 
