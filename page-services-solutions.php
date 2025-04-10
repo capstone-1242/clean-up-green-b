@@ -156,5 +156,76 @@ get_header();
         </div>
     </div>
 </section>
+<!-- Quote Request Modal -->
+<div id="quoteModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>Request a Free Quote</h3>
+        <form id="quoteForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="quoteService">Service Needed</label>
+                <select id="quoteService" name="service" required>
+                    <option value="">Select a service</option>
+                    <option value="Parking lot oil stain removal">Parking lot oil stain removal</option>
+                    <option value="Driveway oil stain removal">Driveway oil stain removal</option>
+                    <option value="Industrial spill remediation">Industrial spill remediation</option>
+                    <option value="Residential oil cleanup">Residential oil cleanup</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="quoteArea">Approximate Area Size (sq ft)</label>
+                <select id="quoteArea" name="area" required>
+                    <option value="">Select area size</option>
+                    <option value="Less than 100">Less than 100 sq ft</option>
+                    <option value="100-500">100-500 sq ft</option>
+                    <option value="500-1000">500-1000 sq ft</option>
+                    <option value="1000+">1000+ sq ft</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="quoteAddress">Address</label>
+                <input type="text" id="quoteAddress" name="address" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="quotePhone">Phone Number</label>
+                <input type="tel" id="quotePhone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="quoteEmail">Email</label>
+                <input type="email" id="quoteEmail" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="quoteNotes">Additional Notes</label>
+                <textarea id="quoteNotes" name="notes" rows="3"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="quotePhotos">Upload Photos (Optional)</label>
+                <input type="file" id="quotePhotos" name="photos[]" multiple accept="image/*">
+            </div>
+            
+            <button type="submit" class="btn">Get Quote</button>
+        </form>
+    </div>
+</div>
+
+<!-- Confirmation Modal -->
+<div id="confirmationModal" class="modal">
+    <div class="modal-content text-center">
+        <span class="close-modal">&times;</span>
+        <svg class="success-icon" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+        <h3>Thank You!</h3>
+        <p>We've received your quote request. Our team will review your information and send you a customized quote to your email within 24-48 hours.</p>
+        <button class="btn close-confirmation">OK</button>
+    </div>
+</div>
 
 <?php get_footer(); ?>

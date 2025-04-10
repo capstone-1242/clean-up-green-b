@@ -453,3 +453,88 @@ function cleeanupgreen_enqueue_font_awesome() {
     wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css' );
 }
 add_action( 'wp_enqueue_scripts', 'cleeanupgreen_enqueue_font_awesome' );
+
+// Process quote request form
+add_action('wp_ajax_process_quote_request', 'process_quote_request');
+add_action('wp_ajax_nopriv_process_quote_request', 'process_quote_request');
+
+function process_quote_request() {
+    // Verify nonce
+    if (!isset($_POST['security']) || !wp_verify_nonce($_POST['security'], 'quote_request_nonce')) {
+        wp_send_json_error('Invalid nonce');
+    }
+    
+    // Sanitize input
+    $service = sanitize_text_field($_POST['service']);
+    $area = sanitize_text_field($_POST['area']);
+    $address = sanitize_text_field($_POST['address']);
+    $phone = sanitize_text_field($_POST['phone']);
+    $email = sanitize_email($_POST['email']);
+    $notes = sanitize_textarea_field($_POST['notes']);
+    
+    // Admin email
+    $admin_email = get_option('admin_email');
+    $subject = 'New Quote Request: ' . $service;
+    
+    // Email content
+    $message = "New quote request details:\n\n";
+    $message .= "Service: $service\n";
+    $message .= "Area Size: $area\n";
+    $message .= "Address: $address\n";
+    $message .= "Phone: $phone\n";
+    $message .= "Email: $email\n";
+    $message .= "Notes: $notes\n";
+    
+    // Handle file uploads
+    $attachments = array();
+    if (!empty($_FILES['photos'])) {
+        require_once(ABSPATH . 'wp-admin/includes/file.php');
+        
+        $upload_overrides = array('test_form' => false);
+        $files = $_FILES['photos'];
+        
+        foreach ($files['name'] as $key => $value) {
+            if ($files['name'][$key]) {
+                $file = array(
+                    'name' => $files['name'][$key],
+                    'type' => $files['type'][$key],
+                    'tmp_name' => $files['tmp_name'][$key],
+                    'error' => $files['error'][$key],
+                    'size' => $files['size'][$key]
+                );
+                
+                $movefile = wp_handle_upload($file, $upload_overrides);
+                
+                if ($movefile && !isset($movefile['error'])) {
+                    $attachments[] = $movefile['file'];
+                }
+            }
+        }
+    }
+    
+    // Send email to admin
+    wp_mail($admin_email, $subject, $message, '', $attachments);
+    
+    // Send confirmation to user
+    $user_subject = 'Your Quote Request Has Been Received';
+    $user_message = "Thank you for requesting a quote from Clean-Up Green. We've received your request with the following details:\n\n";
+    $user_message .= "Service: $service\n";
+    $user_message .= "Area Size: $area\n";
+    $user_message .= "Address: $address\n\n";
+    $user_message .= "Our team will review your request and send you a customized quote within 24-48 hours.\n\n";
+    $user_message .= "If you have any questions, please don't hesitate to contact us.\n\n";
+    $user_message .= "Best regards,\nThe Clean-Up Green Team";
+    
+    wp_mail($email, $user_subject, $user_message);
+    
+    // Clean up attachments
+    if (!empty($attachments)) {
+        foreach ($attachments as $attachment) {
+            if (file_exists($attachment)) {
+                unlink($attachment);
+            }
+        }
+    }
+    
+    wp_send_json_success();
+}

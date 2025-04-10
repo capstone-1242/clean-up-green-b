@@ -143,3 +143,64 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+jQuery(document).ready(function($) {
+    // Open modal when Get Quote button is clicked
+    $('a[href="#"].btn').on('click', function(e) {
+        e.preventDefault();
+        $('#quoteModal').fadeIn(300);
+    });
+    
+    // Close modal when X is clicked
+    $('.close-modal').on('click', function() {
+        $(this).closest('.modal').fadeOut(300);
+    });
+    
+    // Close modal when clicking outside
+    $(window).on('click', function(e) {
+        if ($(e.target).hasClass('modal')) {
+            $('.modal').fadeOut(300);
+        }
+    });
+    
+    // Close confirmation modal
+    $('.close-confirmation').on('click', function() {
+        $('#confirmationModal').fadeOut(300);
+    });
+    
+    // Handle form submission
+    $('#quoteForm').on('submit', function(e) {
+        e.preventDefault();
+        
+        var formData = new FormData(this);
+        
+        // Add nonce for security
+        formData.append('security', '<?php echo wp_create_nonce("quote_request_nonce"); ?>');
+        formData.append('action', 'process_quote_request');
+        
+        $.ajax({
+            url: '<?php echo admin_url("admin-ajax.php"); ?>',
+            type: 'POST',
+            data: formData,
+            contentType: false,
+            processData: false,
+            beforeSend: function() {
+                $('#quoteForm button[type="submit"]').prop('disabled', true).text('Processing...');
+            },
+            success: function(response) {
+                if (response.success) {
+                    $('#quoteModal').fadeOut(300);
+                    $('#quoteForm')[0].reset();
+                    $('#confirmationModal').fadeIn(300);
+                } else {
+                    alert('There was an error. Please try again.');
+                }
+            },
+            complete: function() {
+                $('#quoteForm button[type="submit"]').prop('disabled', false).text('Get Quote');
+            },
+            error: function() {
+                alert('There was an error. Please try again.');
+            }
+        });
+    });
+});
