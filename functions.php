@@ -538,3 +538,9 @@ function process_quote_request() {
     
     wp_send_json_success();
 }
+
+// Haileys Work
+function remove_product_meta() {
+    remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+}
+add_action( 'woocommerce_before_single_product', 'remove_product_meta' );
