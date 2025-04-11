@@ -6,8 +6,14 @@ get_header();
 ?>
 
 <main class="contact">
+
+<section id="hero-banner" class="hero">
+    <div class="hero-content container">
+        <h1>CONTACT US</h1>
+    </div>
+</section>
     <div class="contact-container" style="display: flex; flex-wrap: wrap; gap: 40px;">
-        <!-- Contact Form Column -->
+
         <div class="contact-us-form" style="flex: 1; min-width: 300px;">
             <h2>Contact Us</h2>
             <form>
@@ -35,7 +41,6 @@ get_header();
             </form>
         </div>
 
-        <!-- Contact Information Column -->
         <div class="contact-info" style="flex: 1; min-width: 300px;">
             <div class="info-block">
                 <p>36, 52502 RR 25<br>
