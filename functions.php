@@ -459,11 +459,6 @@ add_action('wp_ajax_process_quote_request', 'process_quote_request');
 add_action('wp_ajax_nopriv_process_quote_request', 'process_quote_request');
 
 function process_quote_request() {
-    // Verify nonce
-    if (!isset($_POST['security']) || !wp_verify_nonce($_POST['security'], 'quote_request_nonce')) {
-        wp_send_json_error('Invalid nonce');
-    }
-    
     // Sanitize input
     $service = sanitize_text_field($_POST['service']);
     $area = sanitize_text_field($_POST['area']);
@@ -524,8 +519,21 @@ function process_quote_request() {
     $user_message .= "Our team will review your request and send you a customized quote within 24-48 hours.\n\n";
     $user_message .= "If you have any questions, please don't hesitate to contact us.\n\n";
     $user_message .= "Best regards,\nThe Clean-Up Green Team";
-    
-    wp_mail($email, $user_subject, $user_message);
+
+// Define your custom recipient email(s)
+$recipient_emails = array(
+    'manniop73@gmail.com',  // Primary email
+    'second-email@example.com' // Secondary email (optional)
+);
+
+// Send to your custom emails
+wp_mail(
+    $recipient_emails, 
+    'New Quote Request: ' . $service,
+    $message,
+    '', 
+    $attachments
+);
     
     // Clean up attachments
     if (!empty($attachments)) {

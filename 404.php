@@ -13,45 +13,22 @@ get_header();
 	<main id="primary" class="site-main">
 
 		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'cleeanupgreen' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'cleeanupgreen' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'cleeanupgreen' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$cleeanupgreen_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'cleeanupgreen' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$cleeanupgreen_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
+		<div class="cug-404-container">
+        <div class="cug-404-logo">CleanUpGreen</div>
+        <div id="cug-404-error-code">404 Error</div>
+        <div class="cug-404-icon">🌍</div>
+        <h1 class="cug-404-title">Oops! This Page Got Lost in Nature</h1>
+        <p class="cug-404-message">The page you're looking for seems to have wandered off the trail. Maybe it's out cleaning up somewhere green!</p>
+        
+        <div class="cug-404-search">
+            <input type="text" class="cug-404-search-input" placeholder="Search our site...">
+            <button type="submit" class="cug-404-search-button">Search</button>
+        </div>
+        
+        <div class="cug-404-actions">
+            <a href="/home" class="cug-404-primary-btn">Return Home</a>
+            <a href="/contact" class="cug-404-secondary-btn">Report Broken Link</a>
+        </div>
 		</section><!-- .error-404 -->
 
 	</main><!-- #main -->

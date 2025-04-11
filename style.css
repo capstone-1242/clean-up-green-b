@@ -2745,3 +2745,210 @@ cite {
         width: 100%;
     }
 } 
+
+/* policy styles */
+/* Legal Modal Styles */
+.legal-modal-content {
+    padding-top: 5rem;
+    background-color: #fff;
+    margin: 5% auto;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 900px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+    position: relative;
+    color: #333;
+    line-height: 1.6;
+}
+
+.legal-modal-content h1 {
+    color: #2a6b3b;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.legal-modal-content h2 {
+    color: #2a6b3b;
+    margin: 25px 0 15px;
+    font-size: 1.5em;
+}
+
+.legal-modal-content h3 {
+    color: #2a6b3b;
+    margin: 20px 0 10px;
+}
+
+.legal-modal-content ul {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.legal-modal-content li {
+    margin-bottom: 8px;
+}
+
+.close-legal-modal {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-legal-modal:hover {
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .legal-modal-content {
+        width: 90%;
+        padding: 20px;
+        margin: 10% auto;
+    }
+}
+/* CleanUpGreen 404 Page Styles - Unique Class Names */
+.cug-404-body {
+    margin: 0;
+    padding: 0;
+    background-color: #e8f5e9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.cug-404-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.cug-404-logo {
+    color: #2e8b57;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#cug-404-error-code {
+    background-color: #2e8b57;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.cug-404-icon {
+    font-size: 5rem;
+    color: #2e8b57;
+    margin-bottom: 1.5rem;
+}
+
+.cug-404-title {
+    color: #1b5e20;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cug-404-message {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cug-404-search {
+    margin: 2rem auto;
+    max-width: 500px;
+}
+
+.cug-404-search-input {
+    width: 70%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+}
+
+.cug-404-search-button {
+    padding: 0.8rem 1.2rem;
+    background-color: #2e8b57;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.cug-404-search-button:hover {
+    background-color: #1b5e20;
+}
+
+.cug-404-actions {
+    margin: 2rem 0;
+}
+
+.cug-404-primary-btn {
+    display: inline-block;
+    background-color: #2e8b57;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 0.5rem;
+}
+
+.cug-404-primary-btn:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+}
+
+.cug-404-secondary-btn {
+    display: inline-block;
+    background-color: white;
+    color: #2e8b57;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 0.5rem;
+    border: 1px solid #2e8b57;
+}
+
+.cug-404-secondary-btn:hover {
+    background-color: #e8f5e9;
+}
+
+.cug-404-footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .cug-404-container {
+        padding: 1rem;
+    }
+    
+    .cug-404-title {
+        font-size: 2rem;
+    }
+    
+    .cug-404-primary-btn,
+    .cug-404-secondary-btn {
+        display: block;
+        margin: 0.5rem auto;
+    }
+    
+    .cug-404-search-input {
+        width: 60%;
+    }
+}

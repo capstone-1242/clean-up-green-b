@@ -70,16 +70,17 @@
                 <p>&copy; <?php echo date('Y'); ?> Clean-up Green. All rights reserved.</p>
             </div>
             <div class="footer-legal">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Cookie Policy</a>
-            </div>
+    <a href="privacy-policy-2/" class="legal-link">Privacy Policy</a>
+    <a href="terms-of-service/" class="legal-link">Terms of Service</a>
+    <a href="cookie-policy/" class="legal-link">Cookie Policy</a>
+</div>
         </div>
     </div>
 </footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+
 
 </body>
 </html>

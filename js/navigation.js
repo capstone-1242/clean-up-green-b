@@ -167,40 +167,79 @@ jQuery(document).ready(function($) {
         $('#confirmationModal').fadeOut(300);
     });
     
-    // Handle form submission
-    $('#quoteForm').on('submit', function(e) {
-        e.preventDefault();
-        
-        var formData = new FormData(this);
-        
-        // Add nonce for security
-        formData.append('security', '<?php echo wp_create_nonce("quote_request_nonce"); ?>');
-        formData.append('action', 'process_quote_request');
-        
-        $.ajax({
-            url: '<?php echo admin_url("admin-ajax.php"); ?>',
-            type: 'POST',
-            data: formData,
-            contentType: false,
-            processData: false,
-            beforeSend: function() {
-                $('#quoteForm button[type="submit"]').prop('disabled', true).text('Processing...');
-            },
-            success: function(response) {
-                if (response.success) {
-                    $('#quoteModal').fadeOut(300);
-                    $('#quoteForm')[0].reset();
-                    $('#confirmationModal').fadeIn(300);
-                } else {
-                    alert('There was an error. Please try again.');
-                }
-            },
-            complete: function() {
-                $('#quoteForm button[type="submit"]').prop('disabled', false).text('Get Quote');
-            },
-            error: function() {
-                alert('There was an error. Please try again.');
+       
+        // Handle form submission - REPLACE THIS ENTIRE SECTION
+        $('#quoteForm').on('submit', function(e) {
+            e.preventDefault();
+            
+            // Debug: Log form data before sending
+            console.log("Preparing to submit form");
+            var formData = new FormData(this);
+            formData.append('security', '<?php echo wp_create_nonce("quote_request_nonce"); ?>');
+            formData.append('action', 'process_quote_request');
+            
+            // Debug: Show the AJAX URL being used
+            var ajaxUrl = 'https://clean-up-green-b.web.dmitcapstone.ca/wp-admin/admin-ajax.php';
+            console.log("Using AJAX URL:", ajaxUrl);
+            
+            // Debug: Log form data contents
+            for (var pair of formData.entries()) {
+                console.log(pair[0]+ ': ' + pair[1]);
             }
+            
+            $.ajax({
+                url: ajaxUrl,
+                type: 'POST',
+                data: formData,
+                contentType: false,
+                processData: false,
+                dataType: 'json', // Ensure we expect JSON response
+                beforeSend: function() {
+                    $('#quoteForm button[type="submit"]')
+                        .prop('disabled', true)
+                        .html('<span class="spinner"></span> Processing...');
+                },
+                success: function(response, status, xhr) {
+                    console.log("Full response:", response);
+                    console.log("Status:", status);
+                    console.log("XHR:", xhr);
+                    
+                    if (response && response.success) {
+                        $('#quoteModal').fadeOut(300);
+                        $('#confirmationModal').fadeIn(300);
+                    } else {
+                        var errorMsg = 'There was an error. Please try again.';
+                        if (response && response.data) {
+                            errorMsg = response.data;
+                        }
+                        alert(errorMsg);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("AJAX Error:", {
+                        status: status,
+                        error: error,
+                        response: xhr.responseText,
+                        readyState: xhr.readyState,
+                        statusCode: xhr.status
+                    });
+                    
+                    var errorMsg = 'There was an error. Please try again later.';
+                    try {
+                        var jsonResponse = JSON.parse(xhr.responseText);
+                        if (jsonResponse.data) {
+                            errorMsg = jsonResponse.data;
+                        }
+                    } catch (e) {}
+                    
+                    alert(errorMsg);
+                },
+                complete: function() {
+                    $('#quoteForm button[type="submit"]')
+                        .prop('disabled', false)
+                        .text('Get Quote');
+                }
+            });
         });
     });
-});
+    
