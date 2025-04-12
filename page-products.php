@@ -99,28 +99,28 @@ get_header();
             
             <div class="retailers-grid">
                 <div class="retailer-card">
-                    <a href="#">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/retailer">
+                    <a href="https://jsplace.ca/">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/retailer-1">
                     </a>
                 </div>
                 <div class="retailer-card">
-                    <a href="#">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/retailer">
+                    <a href="https://www.s5powersports.ca/">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/retailer-2">
                     </a>
                 </div>
                 <div class="retailer-card">
-                    <a href="#">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/retailer">
+                    <a href="https://yegepoxy.com/?utm_source=GMB&utm_medium=organic&utm_campaign=office">
+                        <p>Yeg Epoxy Edmonton</p>
                     </a>
                 </div>
                 <div class="retailer-card">
-                    <a href="#">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/retailer">
+                    <a href="https://royalcoatingsupply.com/">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/retailer-3">
                     </a>
                 </div>
                 <div class="retailer-card">
-                    <a href="#">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/retailer">
+                    <a href="https://cornerstonepe.ca/">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/retailer-4">
                     </a>
                 </div>
             </div>

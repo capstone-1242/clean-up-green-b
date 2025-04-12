@@ -2136,13 +2136,14 @@ cite {
 .hero {
     position: relative;
     height: 60vh;
-    min-height: 600px;
+    min-height: 530px;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
                 url('assets/images/conatct-banner-desktop.webp');
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
+    color: var(--neutral-3);
 }
 
 .contact {
@@ -2229,7 +2230,10 @@ cite {
     font-weight: bold;
     margin-bottom: 15px;
 }
-
+.contact-logo{
+    max-width: 180px;
+    height: auto;
+}
 .send-button {
     width: 100%;
     display: inline-block;
@@ -2868,52 +2872,44 @@ button.single_add_to_cart_button.button.alt {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 2rem;
     margin: 0;
-    padding: 10px;
+    padding: 2rem;
     background: var(--neutral-3);
     border-radius: 6px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    width: 50%;
+    width: 100%;
+}
+td.value{
+    padding: 1rem 1rem 0rem 1rem !important;
 }
 
 .woocommerce .quantity {
     margin: 0;
     display: flex;
     justify-content: center;
+    padding: 1rem;
 }
 
 .woocommerce .quantity input {
     width: 50px;
     height: 35px;
-    padding: 0 6px;
+    padding: 1rem 6px;
     text-align: center;
     border: 2px solid var(--neutral-1);
     border-radius: 4px;
     font-size: var(--small);
 }
-
-.woocommerce .single_add_to_cart_button {
-    flex: 1;
-    height: 35px;
-    padding: 0 15px;
-    font-size: var(--small);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background-color: var(--primary-1);
-    color: var(--neutral-3);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.entry-title{
+    text-align: center;
 }
 
-.woocommerce .single_add_to_cart_button:hover {
-    background-color: var(--primary-2);
+.wc-block-components-button .wp-element-button .wc-block-cart__submit-button{
+    background-color: var(--primary-1) !important;
+}
+
+.wc-block-components-button .wp-element-button .wc-block-cart__submit-button:hover {
+    background-color: var(--primary-2) !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
